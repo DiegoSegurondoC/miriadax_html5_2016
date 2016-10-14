@@ -1,0 +1,137 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Ejercicio Final Modulo 1</title>
+<style type="text/css">
+	
+@font-face {
+
+font-family: 'Roboto-Black';
+src: url('Roboto-Black.ttf');
+
+}
+
+    body {
+
+    background-color:silver ;
+    text-align:left;
+}
+
+ul {
+    
+    margin:2;
+    padding:5;
+    display:flex;
+    flex-direction: column;
+
+}
+nav ul li {
+    list-style-type: decimal;
+    padding:0.5em;
+    color:white;
+    font-size: 150%;
+    font-style: oblique;
+    font-family: Garamond;
+
+
+}
+li {
+    list-style-type: decimal;
+    padding:0.5em;
+    color:white;
+    font-size: 150%;
+    font-style: oblique;
+    font-family: Garamond;
+
+
+}
+h1 {
+    font-family: cursive;
+    display:block;
+    padding:0em;
+    text-align:left;
+    text-decoration:none;
+    color:red;
+}
+h3 {
+    font: normal 24px/26px "Century Gothic","Trebuchet MS",Arial,Helvetica,sans-serif;
+    padding:0em;
+    text-align:left;
+    color:green;
+}
+h5 {
+    font: normal 20px/22px "Century Gothic","Trebuchet MS",Arial,Helvetica,sans-serif;
+    padding:0em;
+    text-align:left;
+    color:blue;
+}
+h6 {
+    font: normal 18px/20px "Century Gothic","Trebuchet MS",Arial,Helvetica,sans-serif;
+    padding:0em;
+    text-align:left;
+    color:red;
+}
+p {
+
+    font-family: Roboto-Black,serif;
+}
+article .pre {
+  background-color:#F1F1F1;
+  border:1px solid #00000;
+  padding:10px;
+  overflow:auto
+  margin:7px;
+  color:#0150c7;
+  
+}
+</style>
+</head>
+<body>
+<div> 
+<header>
+<h1>Secciones y líneas generales de un documento HTML5</h1>
+<p>
+La especificación HTML5 trae muchos nuevos elementos a los desarrolladores web, permitiéndoles describir la estructura de un documento web con semántica estandarizada. Este documento describe estos elementos y cómo usarlos para definir el perfil de cualquier documento.
+</p>
+</header>
+
+<article>
+    <p>
+        De manera más general, HTML5 trae precisión a las características de seccionado y cabecera, permitiendo a los perfiles de documento ser predecibles y usados por el navegador para mejorar la experiencia de usuario.
+    </p>
+    <h3><strong>El algoritmo de perfilado de HTML5</strong></h3>
+    <h5>Definiendo secciones en HTML5</h5>
+        <p>
+        Todo el contenido incluido dentro del elemento &ltbody&gt es parte de una sección. Las secciones en HTML5 pueden ser anidadas. Además de la sección principal, definida por el elemento &ltbody&gt, los límites de la sección son definidos explícita o implícitamente. La secciones definidas explícitamente son el contenido definido en las etiquetas &ltbody&gt, &ltsection&gt, &ltarticle&gt, &ltaside&gt, &ltfooter&gt, &ltheader&gt, y &ltnav&gt. Nota: Cada sección puede tener su propia jerarquía de cabeceras. Por lo tanto, incluso una sección anidada puede tener un elemento &lth1&gt. Consulte también Definiendo cabeceras en HTML5.
+        </p>
+        <p>Ejemplo</p>
+
+<pre class="pre">
+<ul><h6>
+        &ltsection>
+     &lth1>Forest elephants&lt/h1>
+&ltsection>
+     &lth1>Introduction&lt/h1>
+     &ltp>In this section, we discuss the lesser known forest elephants.
+&lt/section>
+ &ltsection>
+    &lth1>Habitat&lt/h1>
+    &ltp>Forest elephants do not live in trees but among them.
+ &lt/section>
+ &ltaside>
+    &ltp>advertising block
+    &lt/aside>
+&lt/section>
+&ltfooter>
+     &ltp>(c) 2010 The Example company
+&lt/footer>
+</h6>
+</ul>
+</pre>
+
+</article>
+<footer><center>Ejercicio opcional final 2016 Diego Segurondo</center></footer>
+</div>
+</body>
+</html>
