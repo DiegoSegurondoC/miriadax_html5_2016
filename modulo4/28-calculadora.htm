@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Calculadora</title>
+<meta charset="utf-8">
+<style type="text/css">
+  
+
+
+    body {
+
+    background-color:silver ;
+    text-align:left;
+}
+
+ul {
+    
+    margin:2;
+    padding:5;
+    display:flex;
+    flex-direction: column;
+
+}
+nav ul li {
+    list-style-type: decimal;
+    padding:0.5em;
+    color:white;
+    font-size: 150%;
+    font-style: oblique;
+    font-family: Garamond;
+
+
+}
+li {
+    list-style-type: decimal;
+    padding:0.5em;
+    color:white;
+    font-size: 150%;
+    font-style: oblique;
+    font-family: Garamond;
+
+
+}
+h1 {
+    font-family: cursive;
+    display:block;
+    padding:0em;
+    text-align:left;
+    text-decoration:none;
+    color:red;
+}
+h3 {
+    font: normal 24px/26px "Century Gothic","Trebuchet MS",Arial,Helvetica,sans-serif;
+    padding:0em;
+    text-align:center;
+    color:green;
+}
+h5 {
+    font: normal 20px/22px "Century Gothic","Trebuchet MS",Arial,Helvetica,sans-serif;
+    padding:0em;
+    text-align:left;
+    color:blue;
+}
+h6 {
+    font: normal 18px/20px "Century Gothic","Trebuchet MS",Arial,Helvetica,sans-serif;
+    padding:0em;
+    text-align:left;
+    color:red;
+}
+p {
+
+    font-family: Roboto-Black,serif;
+}
+article .pre {
+  background-color:#F1F1F1;
+  border:1px solid #00000;
+  padding:10px;
+  overflow:auto
+  margin:7px;
+  color:#0150c7;
+  
+}
+div {
+    border: 2px solid;
+border-radius: 36px 12px;
+
+}
+</style>
+<script type="text/javascript">
+  var num, acc = 0, op = "";
+
+  function mas()   { acc = num.value;  op = "+"; }
+  function menos() { acc = num.value;  op = "-"; }
+  function multi() { acc = num.value;  op = "*"; }
+  function divide() { acc = num.value;  op = "/"; }
+  function pot()   { 
+    num.value = num.value * num.value;
+
+  }
+  function inverso() { num.value= 1/num.value; }
+  function raiz() { acc = num.value;  op = "sqrt"; }
+  function entero() { 
+    if (num.value >0){
+      num.value=Math.floor(num.value);
+    }
+    else {
+      num.value=(Math.ceil(num.value))*(-1);
+    }
+     }
+       function pote()   { acc = num.value;  op = "pote";}
+
+  function calcular() {
+    if (op === "+") {num.value = (+acc + +num.value)}
+    if (op === "-") {num.value = (+acc - +num.value)}
+    if (op === "*") {num.value = (acc * num.value)}
+    if (op === "/") {num.value = (+acc / +num.value)}
+    if (op === "sqrt") {num.value = (Math.pow(+acc ,1 / +num.value))}
+    if (op === "pote") {num.value = (Math.pow(+acc , +num.value))}
+  }
+
+  function inic ()   {num = document.getElementById("num");}
+  function vaciar () {num.value = "";}  
+</script>
+</head>
+<body onLoad="inic()"><center>
+  <h3>BUENOS DIAS, BIENVENIDO</h3>
+  <h3>A LA CALCULADORA DE</h3>
+  <h3>DIEGO GABRIEL SEGURONDO CABRERA</h3>
+  <div>
+  Número:<p>
+  <input type="text" size="12" id="num" onClick="vaciar()"><p>
+
+
+  <button onClick="pot()">x^²</button>
+  <button onClick="inverso()">1/x</button>
+  <button onClick="raiz()">sqrt(x,y)</button>
+  <button onClick="entero()">entero</button>
+  <button onClick="pote()">x^y</button>
+  </p>
+  <p>
+  <button onClick="mas()">+</button>
+  <button onClick="menos()">-</button>
+  <button onClick="multi()">*</button>
+  <button onClick="divide()">/</button>
+  <button onClick="calcular()">EXE</button>
+
+  </p>
+  </div>
+</center></body>
+</html>
