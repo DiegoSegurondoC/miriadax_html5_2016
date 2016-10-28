@@ -1,0 +1,50 @@
+<!DOCTYPE html><html>
+<head>
+  <title>Date</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+  <h1 id="h1">RELOJ</h1>
+  <h3 id="h3">Diego Gabriel Segurondo Cabrera</h3>
+  <h2 id="h2">La fecha y la hora son:</h2>
+  <div id="fecha"></div>
+  <div></div>
+ <script type="text/javascript">
+  var fecha = new Date();
+  var msj;
+
+  if      (fecha.getHours() < 7)  { msj = "Buenas noches";}
+  else if (fecha.getHours() < 12) { msj = "Buenos días";}
+  else if (fecha.getHours() < 21) { msj = "Buenas tardes";}
+  else                                          { msj = "Buenas noches";}
+
+  document.getElementById("h1").innerHTML    = msj;
+  document.getElementById("fecha").innerHTML = fecha;
+</script>
+<script type="text/javascript">
+var h2;
+h2 = document.getElementById("h2").innerHTML;
+document.writeln("El contenido innerHTML de h2 es : '"+h2+"'</br>");
+
+var h1;
+h1 = document.getElementById("h1").outerHTML;
+document.writeln("El contenido innerHTML de h1 es : "+h1+"</br>");
+
+var a;
+a = document.location.href;
+document.writeln("El contenido de location.href es : '"+a+"'</br>");
+
+var b;
+b = document.location;
+document.writeln("El contenido de location es : '"+b+"'</br>");
+
+var c;
+c = screen.width;
+document.writeln("El contenido de screen.width es : '"+c+"'</br>");
+
+var d;
+d = screen.height;
+document.writeln("El contenido de screen.heigth es : '"+d+"'</br>");
+</script>
+</body>
+</html>
